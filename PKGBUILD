@@ -11,14 +11,14 @@ source=("https://github.com/monacoinproject/monacoin/archive/v$pkgver-hotfix.tar
 md5sums=('cffdf0e505820b62fe8104c9c47d8fa9')
 
 build() {
-	cd "$srcdir/$pkgname-$pkgver-hotfix"
+  cd "$srcdir/$pkgname-$pkgver-hotfix"
   ./autogen.sh
-	./configure --with-incompatible-bdb
+  ./configure --with-incompatible-bdb
   make
 }
 
 package() {
-	cd "$srcdir/$pkgname-$pkgver-hotfix"
+  cd "$srcdir/$pkgname-$pkgver-hotfix"
 #	make DESTDIR="$pkgdir/" install
   install -Dm755 src/qt/monacoin-qt "$pkgdir"/usr/bin/monacoin-qt
   install -Dm755 src/monacoind "$pkgdir"/usr/bin/monacoind
