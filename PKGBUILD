@@ -13,7 +13,13 @@ md5sums=('cffdf0e505820b62fe8104c9c47d8fa9')
 build() {
   cd "$srcdir/$pkgname-$pkgver-hotfix"
   ./autogen.sh
-  ./configure --with-incompatible-bdb
+  ./configure \
+    --with-incompatible-bdb \
+    #--with-gui=qt5 \
+    #--without-gui \
+    #--enable-upnp-default \
+    #--disable-wallet
+
   make
 }
 
