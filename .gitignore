@@ -1,2 +1,6 @@
-.PKGBUILD.swp
-monacoin-0.10.2.2-hotfix/
+.*.swp
+monacoin-*-hotfix/
+pkg/
+src/
+v*-hotfix.tar.gz
+monacoin-*.pkg.tar.xz
