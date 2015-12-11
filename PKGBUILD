@@ -14,6 +14,7 @@ build() {
   cd "$srcdir/$pkgname-$pkgver-hotfix"
   ./autogen.sh
   ./configure \
+    --without-miniupnpc \
     --with-incompatible-bdb \
     #--with-gui=qt5 \
     #--without-gui \
