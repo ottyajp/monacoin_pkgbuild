@@ -6,7 +6,7 @@ pkgdesc="peer to peer crypto currency Monacoin full client."
 arch=('i686' 'x86_64')
 url="http://monacoin.org/"
 license=('MIT')
-depends=('boost-libs' 'qt4' 'qrencode' 'protobuf' 'db4.8')
+depends=('boost-libs' 'qt4' 'qrencode' 'protobuf')
 source=("https://github.com/monacoinproject/monacoin/archive/v$pkgver-hotfix.tar.gz")
 md5sums=('cffdf0e505820b62fe8104c9c47d8fa9')
 
