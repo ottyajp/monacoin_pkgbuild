@@ -1,0 +1,3 @@
+monacoinをビルドできそうなPKGBUILDを手探りで作ります。
+
+ArchLinuxっていうかantergosで書いてるけどまぁなんとかなるっしょ
