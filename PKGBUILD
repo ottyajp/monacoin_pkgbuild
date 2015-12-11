@@ -1,8 +1,3 @@
-# This is an example PKGBUILD file. Use this as a start to creating your own,
-# and remove these comments. For more information, see 'man PKGBUILD'.
-# NOTE: Please fill out the license field for your package! If it is unknown,
-# then please put 'unknown'.
-
 # Maintainer: Your Name <youremail@domain.com>
 pkgname=monacoin
 pkgver=0.10.2.2
@@ -12,14 +7,13 @@ arch=('i686' 'x86_64')
 url="http://monacoin.org/"
 license=('MIT')
 depends=('boost-libs' 'qt4' 'qrencode' 'protobuf' 'db4.8')
-makedepends=('boost' 'qrencode' 'protobuf')
 source=("https://github.com/monacoinproject/monacoin/archive/v$pkgver-hotfix.tar.gz")
 md5sums=('cffdf0e505820b62fe8104c9c47d8fa9')
 
 build() {
 	cd "$srcdir/$pkgname-$pkgver-hotfix"
   ./autogen.sh
-	./configure
+	./configure --with-incompatible-bdb
   make
 }
 
